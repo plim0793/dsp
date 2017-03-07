@@ -43,7 +43,8 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > ls: lists the files/folders in the current working directory.
+> > 
+ls: lists the files/folders in the current working directory.
 ls -a: displays all files.  
 ls -l: list in long format.  
 ls -lh: uses unit suffixes: Byte, Kilobyte, etc in order to reduce number of digits to three or less using base 2 for sizes.  
@@ -66,7 +67,9 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 What does `xargs` do? Give an example of how to use it.
 
 > > xargs is used to construct an argument list and execute utility.  
+'''python
 $ find . -name "*.txt" -print0 | xargs ls -l
+'''
 
  
 
