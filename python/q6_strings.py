@@ -1,5 +1,7 @@
 # Based on materials copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
+import re
+from math import ceil
 
 
 def donuts(count):
@@ -18,7 +20,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    if count < 10:
+        print('Number of donuts: ', count)
+    else:
+        print('Number of donuts: many')
 
 
 def both_ends(s):
@@ -37,7 +42,13 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) < 2:
+        print('')
+    else:
+        first_two = s[:2]
+        last_two = s[-2:]
+        string = first_two + last_two
+        print(string)
 
 
 def fix_start(s):
@@ -56,8 +67,14 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    s_list = list(s)
+    for i in range(1, len(s_list)):
+        if s_list[0] == s_list[i]:
+            s_list[i] = '*'
 
+    s = "".join(s_list)
+
+    print(s)
 
 def mix_up(a, b):
     """
@@ -74,7 +91,19 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    a_list = list(a)
+    b_list = list(b)
+    a_two = a_list[:2]
+    b_two = b_list[:2]
+
+    a_list = b_two + a_list[2:]
+    b_list = a_two + b_list[2:]
+
+    a = "".join(a_list)
+    b = "".join(b_list)
+
+    print(a + ' ' + b)
+
 
 
 def verbing(s):
@@ -91,8 +120,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
-
+    if len(s) < 3:
+        print(s)
+    else:
+        if 'ing' in s:
+            print(s + 'ly')
+        else:
+            print(s + 'ing')
 
 def not_bad(s):
     """
@@ -111,7 +145,10 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    s = re.sub(r"not\s.*\sbad", 'good', s, 1)
+
+    print(s)
+
 
 
 def front_back(a, b):
@@ -130,4 +167,44 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    a_len = ceil(len(a)/2)
+    b_len = ceil(len(b)/2)
+
+    a_front = a[:a_len]
+    a_back = a[a_len:]
+
+    b_front = b[:b_len]
+    b_back = b[b_len:]
+
+    print(a_front + b_front + a_back + b_back)
+
+if __name__ == '__main__':
+    donuts(5)
+    donuts(10)
+
+    both_ends('spring')
+    both_ends('Hello')
+    both_ends('xyz')
+    both_ends('a')
+
+    fix_start('aardvark')
+    fix_start('google')
+    fix_start('donut')
+
+    mix_up('pezzy', 'firm')
+    mix_up('dog', 'dinner')
+
+    verbing('do')
+    verbing('swiming')
+    verbing('hail')
+
+    not_bad('This movie is not so bad')
+    not_bad("It's bad yet not")
+    not_bad('This dinner is not that bad!')
+    not_bad('This tea is not hot')
+
+    front_back('Kitten', 'Donut')
+    front_back('abcde', 'xyz')
+
+
+
