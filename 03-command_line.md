@@ -67,9 +67,9 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 What does `xargs` do? Give an example of how to use it.
 
 > > xargs is used to construct an argument list and execute utility.  
-'''python
+```python
 $ find . -name "*.txt" -print0 | xargs ls -l
-'''
+```
 
  
 
