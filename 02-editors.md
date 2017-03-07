@@ -89,6 +89,6 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> Sublime will be my graphical editor since I have experience using it.
+>> Sublime will be my graphical editor since I have experience using it from before.
 
  
