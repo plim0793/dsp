@@ -19,7 +19,16 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > pwd: print working directory
+> > mkdir: make a directory
+> > rmdir: remove a directory
+> > touch: create an empty file in directory
+> > rm: removes file
+> > mv: renames file
+> > ls -a: show all files including hidden files
+> > cp: copy a file from one directory to another
+> > cd: change directory
+> > less: open file to see content in terminal
 
 ---
 
@@ -34,7 +43,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls: lists the files/folders in the current working directory.
+> > ls -a: displays all files
+> > ls -l: list in long format.
+> > ls -lh: uses unit suffixes: Byte, Kilobyte, etc in order to reduce number of digits to three or less using base 2 for sizes.
+> > ls -lah: list in long format for all files and uses unit suffixes.
+> > ls -t: sort by time modified before sorting the operands by lexicongraphical order.
+> > ls - Glp: Enables colorized outpur for list in long format and writes a slash after each filename if that file is a directory.
 
 ---
 
@@ -42,7 +57,7 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -a, ls -l, ls -lp, ls -t, and ls -S are my favorites because they are useful in sorting the list of files/folders in the directory.
 
 ---
 
@@ -50,7 +65,8 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs is used to construct an argument list and execute utility.
+> > ex: 
 
  
 
