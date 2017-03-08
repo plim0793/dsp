@@ -15,8 +15,13 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    count = 0
 
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count += 1
+
+    return count
 
 def front_x(words):
     """
@@ -32,7 +37,22 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    x_list = []
+    other_list = []
+
+    for word in words:
+        if word[0] == 'x':
+            x_list.append(word)
+        else:
+            other_list.append(word)
+
+
+    x_list.sort()
+    other_list.sort()
+
+    return x_list + other_list
+
+
 
 
 def sort_last(tuples):
@@ -49,7 +69,19 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    d = {}
+    l = []
+
+    for tup in tuples:
+        if tup[-1] not in d:
+            d[tup[-1]] = tup
+        else:
+            d[tup[-1]] += tup
+    
+    for key in sorted(d):
+        l.append(d[key])
+
+    return l
 
 
 def remove_adjacent(nums):
@@ -68,7 +100,7 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    return list(set(nums))
 
 
 def linear_merge(list1, list2):
@@ -85,4 +117,37 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    list1.extend(list2)
+    list1.sort()
+    return list1
+
+
+if __name__ == '__main__':
+
+    print(match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']))
+    print(match_ends(['', 'x', 'xy', 'xyx', 'xx']))
+    print(match_ends(['aaa', 'be', 'abc', 'hello']))
+
+
+    print(front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa']))
+    print(front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa']))
+    print(front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark']))
+
+    print(sort_last([(1, 3), (3, 2), (2, 1)]))
+    print(sort_last([(2, 3), (1, 2), (3, 1)]))
+    print(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]))
+
+    print(remove_adjacent([1, 2, 2, 3]))
+    print(remove_adjacent([2, 2, 3, 3, 3]))
+    print(remove_adjacent([3, 2, 3, 3, 3]))
+
+    print(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']))
+    print(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']))
+    print(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']))
+
+
+
+
+
+
+
