@@ -20,20 +20,20 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 ####Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
 >> PhD: 31  
-ScD: 6
-MD: 1
-MPH: 2
-BSEd: 1
-MS: 2
-JD: 1
-MA: 1
+ScD: 6  
+MD: 1  
+MPH: 2  
+BSEd: 1  
+MS: 2  
+JD: 1  
+MA: 1  
 And there was one entry with a '0' value.
 
 
 #### Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> Associate Professor of Biostatistics: 12
-Professor of Biostatistics: 13
+>> Associate Professor of Biostatistics: 12  
+Professor of Biostatistics: 13  
 Assistant Professor of Biostatistics: 12 (There was one instance of 'Assistant Professor is Biostatistics' which has been counted as just a typographical error)
 
 
@@ -46,10 +46,10 @@ Assistant Professor of Biostatistics: 12 (There was one instance of 'Assistant P
 
 #### Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> cceb.med.upenn.edu: 1
-email.chop.edu: 1
-upenn.edu: 12
-mail.med.upenn.edu: 23
+>> cceb.med.upenn.edu: 1  
+email.chop.edu: 1  
+upenn.edu: 12  
+mail.med.upenn.edu: 23  
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
