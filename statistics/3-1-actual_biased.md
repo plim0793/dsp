@@ -40,4 +40,4 @@ if __name__ == '__main__':
 	main()
 
 ```
-The pmf mean was 1.02 and the biased_pmf mean was 2.40. The unbiased pmf plot shows that there is a higher probability of finding a family with no kids than finding a family with 1 or more kids. However, the biased pmf plot shows that the probability of finding a family with no kids is zero since if you ask a child how many children there are in the family then the answer has to be greater than 0. 
+>> The pmf mean was 1.02 and the biased_pmf mean was 2.40. The unbiased pmf plot shows that there is a higher probability of finding a family with no kids than finding a family with 1 or more kids. However, the biased pmf plot shows that the probability of finding a family with no kids is zero since if you ask a child how many children there are in the family then the answer has to be greater than 0. 

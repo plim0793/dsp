@@ -84,14 +84,24 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> The question is asking: what is the probability that Elvis is an identical twin given he has a twin brother. This conditional probability can be calculated using Bayes' Theorem, which states
+
+>> P(A|B) = [P(B|A)*P(A)]/P(B)
+
+>> Where A = probability that Elvis is an identical twin and B = probability that Elvis has a twin brother.
+
+>> A is given in the problem statement and is 1/300 (0.0033). B is the total probability of any person being a twin which is P(boy boy)*P(identical) + P(boy boy)*P(fraternal) or (1/2)*(1/300) + (1/4)*(1/125) or 0.0037. For identical twins there are only two options: boy boy or girl girl. For fraternal twins, there are 2! choices or 4 choices.
+
+>> P(B|A) is the probability that Elvis has a twin brother given Elvis is an identical twin. This is 1/2 because for identical twins there is a 50% chance that they are boy boy.
+
+>> Plugging in the values yields: P(A|B) = [0.5*0.0033]/[0.0037] or 45.5%.
 
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> From what I've researched online, it seems that the main difference between frequentist and Bayesian statistics is the use of prior information to influence conclusions drawn from data. For example, if a coin was tossed 1000 times with an outcome of 490 heads, then the frequentist would claim the probability of heads is 49%. But, the Bayesian statistician would conclude that the 1% difference from the expected 50% is too small to conclude that the coin is not fair since the chance of encountering an unfair coin is so low. For frequentists, the probability of heads is set and cannot change, but for Bayesian statisticians the probability of heads is influenced by prior knowledge and the given data. If the data strongly suggests an unfair coin, then the Bayesian statistician would similarly conclude that the coin is unfair.
 
 ---
 
